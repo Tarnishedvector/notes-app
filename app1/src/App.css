@@ -1,0 +1,152 @@
+/* ---------- CSS RESET ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ---------- BACKGROUND ---------- */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+}
+
+/* ---------- APP CARD ---------- */
+.App {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- TITLE ---------- */
+h1 {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------- FORM ---------- */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+}
+
+/* ---------- ADD BUTTON ---------- */
+button {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ---------- NOTES LIST ---------- */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ---------- NOTE CARD ---------- */
+li {
+  background: white;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.25s ease;
+}
+
+li span {
+  flex: 1;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* ---------- DELETE BUTTON ---------- */
+li button {
+  background: none;
+  color: #ef4444;
+  font-size: 1.1rem;
+  padding: 6px 8px;
+}
+
+li button:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 8px;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 500px) {
+  .App {
+    height: 100vh;
+    border-radius: 0;
+    padding: 20px;
+  }
+}
+
+
+
